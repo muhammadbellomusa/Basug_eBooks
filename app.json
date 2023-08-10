@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "Basug eBooks",
+    "slug": "BasugEbook",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Icons.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yaya01.BasugEbook",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "permissions": {
+        "allowNotifications": true
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Icons.png",
+        "backgroundColor": "#ffffff",
+        "useNextNotificationsApi": true,
+        "permissions": [
+          "NOTIFICATIONS"
+        ]
+      },
+      "package": "com.yaya01.BasugEbook",
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e5c82454-237e-44a1-beda-1e5e7065bc1f"
+      }
+    },
+    "plugins": [
+
+      
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "expo-document-picker",
+      [
+        "@react-native-voice/voice",
+        {
+          "microphonePermission": "Allow Voice to record microphone",
+          "speechRecognitionPermissio": "Allow Voice Recognition to securely recognize user speech"
+        }
+      ],
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "development"
+        }
+      ]
+    ],
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/e5c82454-237e-44a1-beda-1e5e7065bc1f"
+    }
+  }
+}
